@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leeds Comets Netball - Queer-Inclusive Netball Team</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #0046ad;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Header styles - using Leeds Comets blue */
+        header {
+            background-color: #0046ad; /* Primary brand color */
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .logo-container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        
+        .logo-image {
+            max-width: 100%;
+            height: auto;
+            background-color: #0046ad;
+        }
+        
+        .tagline {
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #0046ad; /* Unified to match logo color */
+            padding: 1rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+        
+        /* Main content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-image {
+            height: 300px;
+            background-color: #0046ad; /* Primary brand color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            padding: 2rem;
+        }
+        
+        h1, h2, h3 {
+            color: #0046ad; /* Primary brand color for headings */
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #0046ad; /* Primary brand color */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #003c90; /* Slightly darker hover color */
+            text-decoration: none;
+        }
+        
+        /* Features section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #0046ad; /* Primary brand color */
+        }
+        
+        /* Practice times */
+        .practice-times {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .practice-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .practice-item:last-child {
+            border-bottom: none;
+        }
+        
+        .practice-date {
+            font-weight: bold;
+            color: #0046ad; /* Primary brand color */
+        }
+        
+        /* Pride colors for mission banner */
+        .mission-banner {
+            background: linear-gradient(
+                to right,
+                #ff0018 0%,
+                #ff0018 16.6%,
+                #ffa52c 16.6%,
+                #ffa52c 33.2%,
+                #ffff41 33.2%,
+                #ffff41 49.8%,
+                #008018 49.8%,
+                #008018 66.4%,
+                #0000f9 66.4%,
+                #0000f9 83%,
+                #86007d 83%,
+                #86007d 100%
+            );
+            padding: 0.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .mission-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0046ad; /* Primary brand color */
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 200px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-image" role="img" aria-label="Leeds Comets Netball Logo">
+                <img src="LeedsComets_Blue.jpg" alt="Leeds Comets Netball Logo" class="logo-image">
+            </div>
+        </div>
+        <div class="tagline">A Queer-Inclusive Netball Team</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#practice">Practice Times</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#join">Join Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section class="hero" id="home">
+            <div class="hero-image">
+                <p>[Team photo will be displayed here]</p>
+            </div>
+            <div class="hero-content">
+                <h1>Welcome to Leeds Comets Netball</h1>
+                <p>We are a queer-inclusive netball team dedicated to creating a welcoming and supportive space for LGBTQ+ individuals and allies to enjoy netball. Whether you're an experienced player or completely new to the sport, Leeds Comets is the perfect place to play, make friends, and be yourself.</p>
+                <a href="#join" class="cta-button">Join Our Team</a>
+            </div>
+        </section>
+        
+        <section id="mission" class="mission-banner">
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <p>Leeds Comets CIC is a queer-inclusive netball team dedicated to creating a welcoming and supportive space for LGBTQ+ individuals and allies to enjoy the sport. We focus on making netball accessible to players of all skill levels, fostering a sense of community, and promoting both physical and mental well-being through team sport.</p>
+                <p>Our aim is to break down barriers to participation, celebrate diversity, and provide a safe and inclusive environment where everyone can develop their skills, build confidence, and have fun.</p>
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🌈</div>
+                <h3>Inclusive Community</h3>
+                <p>We welcome everyone regardless of identity, background, or experience. Our team creates a safe space where you can be your authentic self while enjoying the sport.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏐</div>
+                <h3>All Skill Levels Welcome</h3>
+                <p>Whether you're a complete beginner or an experienced player, we have a place for you. Our focus is on learning, improving, and having fun together.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💪</div>
+                <h3>Physical & Mental Wellbeing</h3>
+                <p>We believe in promoting both physical and mental health through sport, teamwork, and community connection.</p>
+            </div>
+        </section>
+        
+        <section id="practice" class="practice-times">
+            <h2>Practice Times (all are currently 7-8pm)</h2>
+            
+            <!-- Addresses added for each location -->
+            <div class="practice-item">
+                <div class="practice-date">12th March</div>
+                <p>
+                    Leeds East Academy<br>
+                    South Parkway, Seacroft, Leeds, LS14 6TY
+                </p>
+            </div>
+            
+            <div class="practice-item">
+                <div class="practice-date">19th March</div>
+                <p>
+                    Dixons Trinity Chapeltown<br>
+                    Leopold Street, Chapeltown, Leeds, LS7 4AW
+                </p>
+            </div>
+            
+            <div class="practice-item">
+                <div class="practice-date">26th March</div>
+                <p>
+                    Leeds East Academy<br>
+                    South Parkway, Seacroft, Leeds, LS14 6TY
+                </p>
+            </div>
+            
+            <div class="practice-item">
+                <div class="practice-date">2nd April</div>
+                <p>
+                    Leeds East Academy<br>
+                    South Parkway, Seacroft, Leeds, LS14 6TY
+                </p>
+            </div>
+            
+            <div class="practice-item">
+                <div class="practice-date">April - July</div>
+                <p>
+                    Horsforth School<br>
+                    Lee Lane East, Horsforth, Leeds, LS18 5RF
+                </p>
+            </div>
+        </section>
+        
+        <section id="join">
+            <h2>Join Our Team</h2>
+            <p>We're always looking for new players to join Leeds Comets. All skill levels are welcome - if you've never played netball before, we'll help you learn. If you're an experienced player, we'd love to have your expertise!</p>
+            <p>Check out our practice schedule above and feel free to come along to any session. Your first session is free, and we can provide all equipment you need to get started.</p>
+            <p>For more information or to express interest in joining, please contact us using the details below.</p>
+            <a href="#contact" class="cta-button">Contact Us</a>
+        </section>
+    </div>
+    
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: leedscomets@gmail.com</p>
+        <p>Instagram: @leedscometsnetball</p>
+        
+        </div>
+        <p>&copy; 2025 Leeds Comets CIC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
